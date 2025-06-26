@@ -1,0 +1,388 @@
+/* Custom Color Palette */
+:root {
+  --primary-color: #1E40AF;
+  --secondary-color: #F59E0B;
+  --background-color: #F3F4F6;
+  --text-primary: #111827;
+  --text-muted: #6B7280;
+  --success-color: #10B981;
+  --error-color: #EF4444;
+  --white: #FFFFFF;
+  --border-color: #E5E7EB;
+}
+
+/* Base body styles */
+body {
+  background-color: var(--background-color) !important;
+  color: var(--text-primary) !important;
+  font-family: 'Poppins', sans-serif !important;
+  padding-top: 76px; /* space for navbar */
+}
+
+.App {
+  min-height: 100vh;
+}
+
+/* Buttons - Primary */
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: var(--white) !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #1E3A8A !important;
+  border-color: #1E3A8A !important;
+}
+
+/* Buttons - Secondary */
+.btn-secondary {
+  background-color: var(--secondary-color) !important;
+  border-color: var(--secondary-color) !important;
+  color: var(--white) !important;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active {
+  background-color: #D97706 !important;
+  border-color: #D97706 !important;
+}
+
+/* Buttons - Success */
+.btn-success {
+  background-color: var(--success-color) !important;
+  border-color: var(--success-color) !important;
+}
+
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active {
+  background-color: #059669 !important;
+  border-color: #059669 !important;
+}
+
+/* Buttons - Danger */
+.btn-danger {
+  background-color: var(--error-color) !important;
+  border-color: var(--error-color) !important;
+}
+
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active {
+  background-color: #DC2626 !important;
+  border-color: #DC2626 !important;
+}
+
+/* Outline Buttons */
+.btn-outline-primary {
+  color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.btn-outline-secondary {
+  color: var(--secondary-color) !important;
+  border-color: var(--secondary-color) !important;
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--secondary-color) !important;
+  border-color: var(--secondary-color) !important;
+}
+
+.btn-outline-danger {
+  color: var(--error-color) !important;
+  border-color: var(--error-color) !important;
+}
+
+.btn-outline-danger:hover {
+  background-color: var(--error-color) !important;
+  border-color: var(--error-color) !important;
+}
+
+/* Gradient Button */
+.btn-gradient-primary {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #1E3A8A 100%);
+  border: none;
+  color: var(--white);
+}
+
+.btn-gradient-primary:hover {
+  background: linear-gradient(135deg, #1E3A8A 0%, var(--primary-color) 100%);
+  color: var(--white);
+}
+
+/* Hero Gradient */
+.hero-gradient {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #1E3A8A 100%);
+}
+
+/* Card Styles */
+.card {
+  border: 1px solid var(--border-color);
+  background-color: var(--white);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 8px 25px rgba(30, 64, 175, 0.15) !important;
+}
+
+.card-header.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+/* Navbar Custom */
+.navbar-custom {
+  background-color: var(--primary-color) !important;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  color: var(--white) !important;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--white) !important;
+}
+
+/* Product Price */
+.product-price {
+  color: var(--success-color) !important;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Custom Text Colors */
+.text-primary-custom {
+  color: var(--primary-color) !important;
+}
+
+.text-secondary-custom {
+  color: var(--secondary-color) !important;
+}
+
+.text-muted-custom {
+  color: var(--text-muted) !important;
+}
+
+.text-success-custom {
+  color: var(--success-color) !important;
+}
+
+.text-error-custom {
+  color: var(--error-color) !important;
+}
+
+/* Form Focus */
+.form-control:focus {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.25) !important;
+}
+
+.form-label {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* Alerts */
+.alert-success {
+  background-color: rgba(16, 185, 129, 0.1) !important;
+  border-color: var(--success-color) !important;
+  color: var(--success-color) !important;
+}
+
+.alert-danger {
+  background-color: rgba(239, 68, 68, 0.1) !important;
+  border-color: var(--error-color) !important;
+  color: var(--error-color) !important;
+}
+
+/* Spinner */
+.spinner-custom {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--border-color);
+  border-top: 4px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6 {
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 32px !important;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+}
+
+/* Form Validation */
+.form-control.is-invalid {
+  border-color: var(--error-color) !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.25) !important;
+}
+
+.form-control.is-invalid:focus {
+  border-color: var(--error-color) !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.25) !important;
+}
+
+.invalid-feedback {
+  color: var(--error-color) !important;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.invalid-feedback.d-block {
+  display: block !important;
+}
+
+.form-control.is-valid {
+  border-color: var(--success-color) !important;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25) !important;
+}
+
+.form-control.is-valid:focus {
+  border-color: var(--success-color) !important;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25) !important;
+}
+
+/* Simple Mobile-First Responsive Design */
+
+/* Mobile phones (up to 576px) */
+@media (max-width: 575.98px) {
+  /* Navbar brand smaller on mobile */
+  .navbar-brand {
+    font-size: 1.2rem !important;
+  }
+  
+  /* Cards full width with good spacing */
+  .card {
+    margin-bottom: 1rem;
+  }
+  
+  /* Buttons bigger for touch */
+  .btn {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+  
+  /* Form spacing */
+  .form-control {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+  
+  /* Modal full width on mobile */
+  .modal-dialog {
+    margin: 0.5rem;
+    width: calc(100% - 1rem);
+  }
+}
+
+/* Tablets (576px to 768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* Product cards 2 per row on tablets */
+  .col-sm-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  
+  /* Better button sizing */
+  .btn {
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+/* Small laptops (768px to 992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* Product cards 3 per row */
+  .col-md-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+}
+
+/* Large screens (992px and up) */
+@media (min-width: 992px) {
+  /* Product cards 4 per row */
+  .col-lg-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  
+  /* Better spacing for large screens */
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/* Fix dropdown on mobile */
+@media (max-width: 991.98px) {
+  .navbar-nav .dropdown-menu {
+    position: static !important;
+    transform: none !important;
+    border: none;
+    box-shadow: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-top: 0.5rem;
+  }
+  
+  .navbar-nav .dropdown-item {
+    color: rgba(255, 255, 255, 0.9) !important;
+    padding: 0.5rem 1rem;
+  }
+  
+  .navbar-nav .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white !important;
+  }
+}
+
+/* Fix modal responsiveness */
+@media (max-width: 768px) {
+  .modal-lg {
+    max-width: 95vw;
+  }
+  
+  .modal-dialog {
+    margin: 1rem auto;
+  }
+}
