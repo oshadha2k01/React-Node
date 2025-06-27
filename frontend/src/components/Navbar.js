@@ -38,7 +38,6 @@ function Navbar() {
           Product App
         </Link>
 
-        {/* Mobile toggle button */}
         <button 
           className="navbar-toggler" 
           type="button" 
@@ -95,3 +94,4 @@ function Navbar() {
 }
 
 export default Navbar;
+

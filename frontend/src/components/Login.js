@@ -42,7 +42,6 @@ function Login() {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    // Validate before sending
     let valid = true;
 
     if (!username) {
@@ -75,7 +74,6 @@ function Login() {
         text: response.data.message,
       });
 
-      // Reset form
       setUsername('');
       setPassword('');
       setUsernameError('');
@@ -143,7 +141,7 @@ function Login() {
               </form>
 
               <p className="text-center">
-                Don’t have an account?{' '}
+                Don't have an account?{' '}
                 <Link to="/register">Register here</Link>
               </p>
             </div>

@@ -1,4 +1,3 @@
-/* Custom Color Palette */
 :root {
   --primary-color: #1E40AF;
   --secondary-color: #F59E0B;
@@ -11,19 +10,17 @@
   --border-color: #E5E7EB;
 }
 
-/* Base body styles */
 body {
   background-color: var(--background-color) !important;
   color: var(--text-primary) !important;
   font-family: 'Poppins', sans-serif !important;
-  padding-top: 76px; /* space for navbar */
+  padding-top: 76px;
 }
 
 .App {
   min-height: 100vh;
 }
 
-/* Buttons - Primary */
 .btn-primary {
   background-color: var(--primary-color) !important;
   border-color: var(--primary-color) !important;
@@ -37,7 +34,6 @@ body {
   border-color: #1E3A8A !important;
 }
 
-/* Buttons - Secondary */
 .btn-secondary {
   background-color: var(--secondary-color) !important;
   border-color: var(--secondary-color) !important;
@@ -51,7 +47,6 @@ body {
   border-color: #D97706 !important;
 }
 
-/* Buttons - Success */
 .btn-success {
   background-color: var(--success-color) !important;
   border-color: var(--success-color) !important;
@@ -64,7 +59,6 @@ body {
   border-color: #059669 !important;
 }
 
-/* Buttons - Danger */
 .btn-danger {
   background-color: var(--error-color) !important;
   border-color: var(--error-color) !important;
@@ -77,7 +71,6 @@ body {
   border-color: #DC2626 !important;
 }
 
-/* Outline Buttons */
 .btn-outline-primary {
   color: var(--primary-color) !important;
   border-color: var(--primary-color) !important;
@@ -108,7 +101,6 @@ body {
   border-color: var(--error-color) !important;
 }
 
-/* Gradient Button */
 .btn-gradient-primary {
   background: linear-gradient(135deg, var(--primary-color) 0%, #1E3A8A 100%);
   border: none;
@@ -120,12 +112,10 @@ body {
   color: var(--white);
 }
 
-/* Hero Gradient */
 .hero-gradient {
   background: linear-gradient(135deg, var(--primary-color) 0%, #1E3A8A 100%);
 }
 
-/* Card Styles */
 .card {
   border: 1px solid var(--border-color);
   background-color: var(--white);
@@ -141,7 +131,6 @@ body {
   background-color: var(--primary-color) !important;
 }
 
-/* Navbar Custom */
 .navbar-custom {
   background-color: var(--primary-color) !important;
 }
@@ -160,14 +149,12 @@ body {
   color: var(--white) !important;
 }
 
-/* Product Price */
 .product-price {
   color: var(--success-color) !important;
   font-size: 24px;
   font-weight: 600;
 }
 
-/* Custom Text Colors */
 .text-primary-custom {
   color: var(--primary-color) !important;
 }
@@ -188,7 +175,6 @@ body {
   color: var(--error-color) !important;
 }
 
-/* Form Focus */
 .form-control:focus {
   border-color: var(--primary-color) !important;
   box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.25) !important;
@@ -199,7 +185,6 @@ body {
   font-weight: 500;
 }
 
-/* Alerts */
 .alert-success {
   background-color: rgba(16, 185, 129, 0.1) !important;
   border-color: var(--success-color) !important;
@@ -212,7 +197,6 @@ body {
   color: var(--error-color) !important;
 }
 
-/* Spinner */
 .spinner-custom {
   width: 40px;
   height: 40px;
@@ -227,7 +211,6 @@ body {
   100% { transform: rotate(360deg); }
 }
 
-/* Typography */
 h1, h2, h3, h4, h5, h6 {
   color: var(--text-primary);
   font-weight: 600;
@@ -242,7 +225,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .hero-section h1 {
     font-size: 32px !important;
@@ -253,7 +235,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Form Validation */
 .form-control.is-invalid {
   border-color: var(--error-color) !important;
   box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.25) !important;
@@ -284,77 +265,60 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25) !important;
 }
 
-/* Simple Mobile-First Responsive Design */
-
-/* Mobile phones (up to 576px) */
 @media (max-width: 575.98px) {
-  /* Navbar brand smaller on mobile */
   .navbar-brand {
     font-size: 1.2rem !important;
   }
   
-  /* Cards full width with good spacing */
   .card {
     margin-bottom: 1rem;
   }
   
-  /* Buttons bigger for touch */
   .btn {
     padding: 0.75rem 1rem;
     font-size: 1rem;
   }
   
-  /* Form spacing */
   .form-control {
     padding: 0.75rem;
     font-size: 1rem;
   }
   
-  /* Modal full width on mobile */
   .modal-dialog {
     margin: 0.5rem;
     width: calc(100% - 1rem);
   }
 }
 
-/* Tablets (576px to 768px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  /* Product cards 2 per row on tablets */
   .col-sm-6 {
     flex: 0 0 50%;
     max-width: 50%;
   }
   
-  /* Better button sizing */
   .btn {
     padding: 0.6rem 1.2rem;
   }
 }
 
-/* Small laptops (768px to 992px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  /* Product cards 3 per row */
   .col-md-4 {
     flex: 0 0 33.333333%;
     max-width: 33.333333%;
   }
 }
 
-/* Large screens (992px and up) */
 @media (min-width: 992px) {
-  /* Product cards 4 per row */
   .col-lg-3 {
     flex: 0 0 25%;
     max-width: 25%;
   }
   
-  /* Better spacing for large screens */
   .container {
     max-width: 1200px;
   }
 }
 
-/* Fix dropdown on mobile */
 @media (max-width: 991.98px) {
   .navbar-nav .dropdown-menu {
     position: static !important;
@@ -376,7 +340,42 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Fix modal responsiveness */
+@media (max-width: 768px) {
+  .modal-lg {
+    max-width: 95vw;
+  }
+  
+  .modal-dialog {
+    margin: 1rem auto;
+  }
+}
+  .container {
+    max-width: 1200px;
+  }
+
+
+@media (max-width: 991.98px) {
+  .navbar-nav .dropdown-menu {
+    position: static !important;
+    transform: none !important;
+    border: none;
+    box-shadow: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-top: 0.5rem;
+  }
+  
+  .navbar-nav .dropdown-item {
+    color: rgba(255, 255, 255, 0.9) !important;
+    padding: 0.5rem 1rem;
+  }
+  
+  .navbar-nav .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white !important;
+  }
+}
+
+
 @media (max-width: 768px) {
   .modal-lg {
     max-width: 95vw;

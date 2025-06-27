@@ -115,9 +115,9 @@ function ProductForm({ productId, onSuccess, onCancel }) {
 
       setTimeout(() => {
         if (onSuccess) {
-          onSuccess(); // modal use
+          onSuccess();
         } else {
-          navigate('/products'); // page use
+          navigate('/products');
         }
       }, 1500);
     } catch (err) {
@@ -145,7 +145,6 @@ function ProductForm({ productId, onSuccess, onCancel }) {
     );
   }
 
-  // form JSX (used for both modal and page)
   const formJSX = (
     <form onSubmit={handleSubmit}>
       <div className="mb-3">
@@ -199,12 +198,10 @@ function ProductForm({ productId, onSuccess, onCancel }) {
     </form>
   );
 
-  // if used as modal (inside another component)
   if (onSuccess) {
     return formJSX;
   }
 
-  // if used as full page
   return (
     <div className="container py-5">
       <div className="row justify-content-center">

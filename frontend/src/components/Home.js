@@ -4,19 +4,19 @@ import ProductForm from './ProductForm';
 import Swal from 'sweetalert2';
 
 const Home = () => {
-  // State declarations
+  
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showAddModal, setShowAddModal] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
   const [editProductId, setEditProductId] = useState(null);
 
-  // Load products when component mounts
+  
   useEffect(() => {
     fetchProducts();
   }, []);
 
-  // Function to fetch product list
+
   const fetchProducts = async () => {
     try {
       setLoading(true);
@@ -26,10 +26,8 @@ const Home = () => {
       let productsData = [];
 
       if (Array.isArray(response.data)) {
-        // New format: Array of products
         productsData = response.data;
       } else if (response.data && Array.isArray(response.data.products)) {
-        // Old format: Object with 'products' array
         productsData = response.data.products;
       }
 
@@ -49,7 +47,6 @@ const Home = () => {
     }
   };
 
-  // Delete a product
   const handleDelete = async (id, productName) => {
     const result = await Swal.fire({
       title: 'Are you sure?',
@@ -72,7 +69,7 @@ const Home = () => {
           confirmButtonColor: '#10B981'
         });
 
-        fetchProducts(); // Reload list
+        fetchProducts();
       } catch (error) {
         Swal.fire({
           icon: 'error',
@@ -84,7 +81,6 @@ const Home = () => {
     }
   };
 
-  // Modal handlers
   const handleShowAddModal = () => setShowAddModal(true);
   const handleCloseAddModal = () => setShowAddModal(false);
   const handleShowEditModal = (productId) => {
@@ -96,7 +92,6 @@ const Home = () => {
     setShowEditModal(false);
   };
 
-  // Callback when a product is added/updated
   const handleProductAdded = () => {
     setShowAddModal(false);
     fetchProducts();
@@ -107,7 +102,6 @@ const Home = () => {
     fetchProducts();
   };
 
-  // Show loading spinner while fetching data
   if (loading) {
     return (
       <div className="container py-5">
@@ -123,14 +117,12 @@ const Home = () => {
 
   return (
     <div className="container py-3">
-      {/* Add product button */}
       <div className="d-flex justify-content-center justify-content-md-end align-items-center mb-4">
         <button onClick={handleShowAddModal} className="btn btn-primary">
           <i className="bi bi-plus-circle me-2"></i>Add New Product
         </button>
       </div>
 
-      {/* Product list or no products message */}
       {(!products || products.length === 0) ? (
         <div className="row justify-content-center">
           <div className="col-12 col-sm-8 col-md-6">
@@ -188,7 +180,6 @@ const Home = () => {
         </div>
       )}
 
-      {/* Add Modal */}
       {showAddModal && (
         <div className="modal show d-block" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}>
           <div className="modal-dialog modal-lg modal-dialog-centered">
@@ -205,7 +196,6 @@ const Home = () => {
         </div>
       )}
 
-      {/* Edit Modal */}
       {showEditModal && (
         <div className="modal show d-block" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}>
           <div className="modal-dialog modal-lg modal-dialog-centered">
@@ -230,3 +220,4 @@ const Home = () => {
 };
 
 export default Home;
+           

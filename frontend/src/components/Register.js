@@ -40,7 +40,6 @@ function Register() {
       setPasswordError('');
     }
 
-    // Also check confirm password match
     if (confirmPassword && value !== confirmPassword) {
       setConfirmPasswordError('Passwords do not match');
     } else {
@@ -64,7 +63,6 @@ function Register() {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    // Final check before submit
     let hasError = false;
 
     if (!username) {

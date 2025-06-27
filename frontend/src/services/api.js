@@ -1,9 +1,7 @@
 import axios from 'axios';
 
-// Base URL for your backend API
 const API_BASE_URL = 'http://localhost:5000/api';
 
-// Create an axios instance to use for API calls
 const api = axios.create({
   baseURL: API_BASE_URL,
   headers: {
@@ -11,7 +9,6 @@ const api = axios.create({
   },
 });
 
-// User-related API functions
 export const userAPI = {
   register: (userData) => {
     console.log('API: Sending registration request with data:', userData);
@@ -22,7 +19,6 @@ export const userAPI = {
   },
 };
 
-// Product-related API functions
 export const productAPI = {
   getAll: () => {
     return api.get('/products');
@@ -41,5 +37,5 @@ export const productAPI = {
   },
 };
 
-// Export the axios instance (optional if needed elsewhere)
 export default api;
+
